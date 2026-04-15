@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sachi Lei Paredes | SEO Content Writer & Strategist</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #fafaf8;
+      --surface: #ffffff;
+      --border: #e8e8e4;
+      --text-primary: #1a1a1a;
+      --text-secondary: #6b6b6b;
+      --text-muted: #9a9a9a;
+      --accent: #2d6a4f;
+      --accent-light: #f0f7f4;
+      --accent-dark: #1b4332;
+      --accent-border: #c8e6d0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background-color: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 248, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      letter-spacing: 0.03em;
+    }
+
+    .nav-logo span { color: var(--accent); }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    .nav-cta {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: #fff !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent-dark) !important;
+      color: #fff !important;
+    }
+
+    /* ── LAYOUT ── */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      padding: 6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    /* ── HERO ── */
+    #hero {
+      padding: 8rem 0 6rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(160deg, #f0f7f4 0%, #fafaf8 60%);
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .hero-name {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: normal;
+      line-height: 1.15;
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+    }
+
+    .hero-name em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-title {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-summary {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.9;
+      margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat-item { text-align: left; }
+
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: normal;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .btn-primary {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.85rem 1.8rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      background: transparent;
+      color: var(--accent);
+      padding: 0.85rem 1.8rem;
+      border-radius: 4px;
+      border: 1px solid var(--accent);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, transform 0.1s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-light);
+      transform: translateY(-1px);
+    }
+
+    .hero-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      align-items: center;
+    }
+
+    .contact-link {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .contact-link:hover { color: var(--accent); }
+
+    /* ── HERO CARD ── */
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    }
+
+    .hero-card-header {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .availability-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.78rem;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+      padding: 0.5rem 0.85rem;
+      border-radius: 6px;
+      margin-bottom: 1.25rem;
+    }
+
+    .availability-dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .card-service-list {
+      list-style: none;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-service-list li {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      padding: 0.4rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-service-list li:last-child { border-bottom: none; }
+
+    .card-service-list li::before {
+      content: '✓';
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .card-cta {
+      display: block;
+      text-align: center;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.85rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.2s;
+      letter-spacing: 0.03em;
+    }
+
+    .card-cta:hover { background: var(--accent-dark); }
+
+    .card-note {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 0.75rem;
+    }
+
+    /* ── VALUE PROPS ── */
+    #value {
+      background: var(--surface);
+      padding: 4rem 0;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .value-card {
+      padding: 1.75rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .value-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 16px rgba(45,106,79,0.08);
+    }
+
+    .value-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    .value-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .value-title {
+      font-size: 1rem;
+      font-weight: normal;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .value-desc {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: normal;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+      max-width: 560px;
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .skill-card:hover { border-color: var(--accent); }
+
+    .skill-category {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--accent-border);
+    }
+
+    .skill-list { list-style: none; }
+
+    .skill-list li {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      padding: 0.25rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .skill-list li::before {
+      content: '';
+      width: 3px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── CERTS ── */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 1rem;
+    }
+
+    .cert-card {
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .cert-check {
+      width: 20px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .cert-check svg {
+      width: 11px;
+      height: 11px;
+      color: #fff;
+    }
+
+    .cert-issuer {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.3rem;
+    }
+
+    .cert-name {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    /* ── INDUSTRIES ── */
+    .industry-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 3rem;
+    }
+
+    .industry-tag {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.9rem;
+      border-radius: 20px;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── PORTFOLIO ── */
+    .client-block { margin-bottom: 3rem; }
+    .client-block:last-child { margin-bottom: 0; }
+
+    .client-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+
+    .client-header-left {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .client-name {
+      font-size: 1.05rem;
+      font-weight: normal;
+      color: var(--text-primary);
+    }
+
+    .client-industry {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    .client-count {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.72rem;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid var(--accent-border);
+      padding: 0.2rem 0.6rem;
+      border-radius: 12px;
+    }
+
+    .client-divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 0.85rem;
+    }
+
+    .articles-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .articles-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .article-dot {
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 0.65rem;
+      opacity: 0.6;
+    }
+
+    .article-link {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.84rem;
+      color: var(--text-secondary);
+      text-decoration: none;
+      line-height: 1.8;
+      transition: color 0.2s;
+      word-break: break-word;
+    }
+
+    .article-link:hover {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ── DOCS ── */
+    .docs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .doc-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .doc-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 16px rgba(45,106,79,0.08);
+    }
+
+    .doc-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--accent-light);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .doc-icon svg { width: 18px; height: 18px; }
+    .doc-info { flex: 1; }
+
+    .doc-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-primary);
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+
+    .doc-sublabel {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    /* ── TESTIMONIAL / TRUST ── */
+    #trust {
+      background: var(--accent);
+      padding: 4rem 0;
+      border-bottom: none;
+    }
+
+    .trust-inner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      text-align: center;
+    }
+
+    .trust-number {
+      font-size: 2.5rem;
+      color: #fff;
+      font-weight: normal;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .trust-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.05em;
+    }
+
+    .trust-divider {
+      width: 1px;
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* ── CTA BAND ── */
+    #cta-band {
+      background: var(--bg);
+      padding: 5rem 0;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cta-band-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta-band-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .cta-band-title {
+      font-size: 2rem;
+      font-weight: normal;
+      color: var(--text-primary);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .cta-band-sub {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .cta-band-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ── CONTACT ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .contact-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 16px rgba(45,106,79,0.08);
+    }
+
+    .contact-card-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--accent-light);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--accent);
+    }
+
+    .contact-card-icon svg { width: 18px; height: 18px; }
+    .contact-card-info { flex: 1; }
+
+    .contact-card-label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-card-value {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-primary);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      padding: 3.5rem 0 2rem;
+      background: #1a1a1a;
+      color: #fff;
+    }
+
+    .footer-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand-name {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand-name span { color: #86efac; }
+
+    .footer-brand-desc {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-col-title {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1rem;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-nav-list a {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-nav-list a:hover { color: #86efac; }
+
+    .footer-contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-contact-list a,
+    .footer-contact-list span {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s;
+    }
+
+    .footer-contact-list a:hover { color: #86efac; }
+
+    .footer-contact-list svg {
+      width: 13px;
+      height: 13px;
+      flex-shrink: 0;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-bottom-links a {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover { color: #86efac; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-card { display: none; }
+      .value-grid { grid-template-columns: 1fr; }
+      .trust-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .trust-divider { display: none; }
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 600px) {
+      .nav-links { gap: 1rem; }
+      .hero-stats { gap: 1.5rem; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .docs-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 420px) {
+      .nav-links { display: none; }
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">Sachi Lei <span>Paredes</span></span>
+      <ul class="nav-links">
+        <li><a href="#value">Services</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#technical">Docs</a></li>
+        <li><a href="mailto:sachileiparedes@gmail.com" class="nav-cta">Hire Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div>
+          <span class="hero-eyebrow">Available for Freelance &amp; Full-Time Remote</span>
+          <h1 class="hero-name">SEO Content That<br/><em>Ranks &amp; Converts</em></h1>
+          <p class="hero-title">Sachi Lei Paredes · SEO Content Writer &amp; Content Strategist</p>
+          <p class="hero-summary">
+            I create long-form content, programmatic landing pages, and product articles that drive organic traffic. My work is grounded in semantic SEO and topical authority — helping brands rank higher and turn readers into customers.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <p class="stat-number">5+</p>
+              <p class="stat-label">Years Experience</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-number">8+</p>
+              <p class="stat-label">Brands Served</p>
+            </div>
+            <div class="stat-item">
+              <p class="stat-number">60+</p>
+              <p class="stat-label">Published Articles</p>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="mailto:sachileiparedes@gmail.com" class="btn-primary">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 7.5-9.75-7.5"/>
+              </svg>
+              Get in Touch
+            </a>
+            <a href="#portfolio" class="btn-secondary">
+              View My Work →
+            </a>
+          </div>
+
+          <div class="hero-contact">
+            <a href="tel:+639760970734" class="contact-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z"/>
+              </svg>
+              +63-976-0970-734
+            </a>
+            <a href="https://www.linkedin.com/in/sachilei" target="_blank" rel="noopener noreferrer" class="contact-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              linkedin.com/in/sachilei
+            </a>
+            <span class="contact-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+              </svg>
+              Pasig City, PH · Remote
+            </span>
+          </div>
+        </div>
+
+        <!-- SIDEBAR CARD -->
+        <div class="hero-card">
+          <p class="hero-card-header">Currently Accepting Projects</p>
+          <div class="availability-badge">
+            <span class="availability-dot"></span>
+            Available Now
+          </div>
+          <ul class="card-service-list">
+            <li>Long-Form SEO Articles</li>
+            <li>Programmatic Landing Pages</li>
+            <li>Product Content Writing</li>
+            <li>Content Strategy &amp; Audits</li>
+            <li>On-Page SEO Optimization</li>
+            <li>Topical Authority Clusters</li>
+          </ul>
+          <a href="https://wa.me/+639194341120" class="card-cta">Send Me a Message</a>
+          <p class="card-note">No commitment · Free initial consultation</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- ── VALUE PROPS ── -->
+  <section id="value">
+    <div class="container">
+      <p class="section-label">What I Offer</p>
+      <h2 class="section-title">Content That Works Harder</h2>
+      <p class="section-subtitle">Every piece I write is built to rank, engage, and convert — not just fill a page.</p>
+
+      <div class="value-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Organic Traffic Growth</h3>
+          <p class="value-desc">I build topical authority through strategic content clusters that signal expertise to search engines and readers alike.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Publication-Ready Content</h3>
+          <p class="value-desc">Fully researched, properly structured, and optimized for on-page SEO — ready to publish with minimal editing required.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Multi-Industry Experience</h3>
+          <p class="value-desc">From health and automotive to e-commerce and SaaS — I adapt my tone, depth, and approach to fit your brand and audience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills">
+    <div class="container">
+      <p class="section-label">Expertise</p>
+      <h2 class="section-title">Skills &amp; Certifications</h2>
+      <p class="section-subtitle">A full-stack content toolkit — from strategy and writing to technical SEO and analytics.</p>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <p class="skill-category">Content</p>
+          <ul class="skill-list">
+            <li>Long-form Article Writing</li>
+            <li>Programmatic Landing Pages</li>
+            <li>Product Content Articles</li>
+            <li>Content Strategy</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="skill-category">SEO</p>
+          <ul class="skill-list">
+            <li>Semantic SEO</li>
+            <li>Topical Authority</li>
+            <li>Keyword Research &amp; Mapping</li>
+            <li>On-Page Optimization</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="skill-category">Technical</p>
+          <ul class="skill-list">
+            <li>Technical SEO</li>
+            <li>Internal Linking</li>
+            <li>Meta Tags &amp; Headings</li>
+            <li>WordPress CMS</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <p class="skill-category">Analytics</p>
+          <ul class="skill-list">
+            <li>Google Analytics</li>
+            <li>Google Search Console</li>
+            <li>Ahrefs</li>
+            <li>SEMrush</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="section-label" style="margin-top: 2.5rem; margin-bottom: 1rem;">Certifications</p>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-check">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="cert-issuer">HubSpot Academy</p>
+            <p class="cert-name">SEO Certified I &amp; II</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-check">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="cert-issuer">HubSpot Academy</p>
+            <p class="cert-name">Inbound Marketing</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-check">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="cert-issuer">Great Learning</p>
+            <p class="cert-name">Social Media Marketing</p>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-check">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+            </svg>
+          </div>
+          <div>
+            <p class="cert-issuer">SEMrush Academy</p>
+            <p class="cert-name">Technical SEO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PORTFOLIO ── -->
+  <section id="portfolio">
+    <div class="container">
+      <p class="section-label">Published Work</p>
+      <h2 class="section-title">Content Portfolio</h2>
+      <p class="section-subtitle">A selection of live articles and landing pages across industries.</p>
+
+      <div class="industry-tags">
+        <span class="industry-tag">Health &amp; Wellness</span>
+        <span class="industry-tag">Automotive</span>
+        <span class="industry-tag">E-commerce</span>
+        <span class="industry-tag">RV &amp; Outdoor</span>
+        <span class="industry-tag">Skincare</span>
+        <span class="industry-tag">Entertainment</span>
+        <span class="industry-tag">PR &amp; Backlinks</span>
+      </div>
+
+      <!-- The Cabin -->
+      <div class="client-block">
+        <div class="client-header">
+          <div class="client-header-left">
+            <h3 class="client-name">The Cabin Chiang Mai</h3>
+            <span class="client-industry">Health &amp; Addiction Recovery</span>
+          </div>
+          <span class="client-count">3 articles</span>
+        </div>
+        <div class="client-divider"></div>
+        <ul class="articles-list">
+          <li><span class="article-dot"></span><a href="https://www.thecabinchiangmai.com/addiction-type/shopping/" target="_blank" rel="noopener noreferrer" class="article-link">Shopping Addiction — Addiction Type Guide</a></li>
+          <li><span class="article-dot"></span><a href="https://www.thecabinchiangmai.com/addiction-type/amphetamines/" target="_blank" rel="noopener noreferrer" class="article-link">Amphetamines Addiction — Addiction Type Guide</a></li>
+          <li><span class="article-dot"></span><a href="https://www.thecabinchiangmai.com/addiction-type/nicotine/" target="_blank" rel="noopener noreferrer" class="article-link">Nicotine Addiction — Addiction Type Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- UAE Driving -->
+      <div class="client-block">
+        <div class="client-header">
+          <div class="client-header-left">
+            <h3 class="client-name">UAE Driving</h3>
+            <span class="client-industry">Automotive &amp; Car Rental</span>
+          </div>
+          <span class="client-count">7 articles</span>
+        </div>
+        <div class="client-divider"></div>
+        <ul class="articles-list">
+          <li><span class="article-dot"></span><a href="https://www.uaedriving.com/car-rental-dubai/location/circle-mall-jvc" target="_blank" rel="noopener noreferrer" class="article-link">Car Rental Dubai — Circle Mall JVC</a></li>
+          <li><span class="article-dot"></span><a href="https://www.uaedriving.com/car-rental-dubai/location/al-rigga" target="_blank" rel="noopener noreferrer" class="article-link">Car Rental Dubai — Al Rigga</a></li>
+          <li><span class="article-dot"></span><a href="https://www.uaedriving.com/car-rental-dubai/location/al-nahda" target="_blank" rel="noopener noreferrer" class="article-link">Car Rental Dubai — Al Nahda</a></li>
+          <li><span class="article-dot"></span><a href="https://www.uaedriving.com/car-rental-dubai/mitsubishi/attrage" target="_blank" rel="noopener noreferrer" class="article-link">Mitsubishi Attrage — Car Rental Dubai</a></li>
+          <li><span class="article-dot"></span><a href="https://www.uaedriving.com/car-rental-dubai/hyundai/creta" target="_blank" rel="noopener noreferrer" class="article-link">Hyundai Creta — Car Rental Dubai</a></li>
+          <li><span class="article-dot"></span><a href="https://www.uaedriving.com/car-rental-dubai/toyota/landcruiser" target="_blank" rel="noopener noreferrer" class="article-link">Toyota Land Cruiser — Car Rental Dubai</a></li>
+          <li><span class="article-dot"></span><a href="https://www.uaedriving.com/monthly-car-rental/kia-k5/" target="_blank" rel="noopener noreferrer" class="article-link">Kia K5 — Monthly Car Rental Dubai</a></li>
+        </ul>
+      </div>
+
+      <!-- Mid-Day -->
+      <div class="client-block">
+        <div class="client-header">
+          <div class="client-header-left">
+            <h3 class="client-name">Mid-Day</h3>
+            <span class="client-industry">Backlink &amp; PR Content</span>
+          </div>
+          <span class="client-count">1 article</span>
+        </div>
+        <div class="client-divider"></div>
+        <ul class="articles-list">
+          <li><span class="article-dot"></span><a href="https://www.mid-day.com/buzz/article/monthly-car-rental-dubai-long-term-car-rental-5796" target="_blank" rel="noopener noreferrer" class="article-link">Monthly Car Rental Dubai: Long-Term Car Rental Guide</a></li>
+        </ul>
+      </div>
+
+      <!-- CBD American Shaman -->
+      <div class="client-block">
+        <div class="client-header">
+          <div class="client-header-left">
+            <h3 class="client-name">CBD American Shaman</h3>
+            <span class="client-industry">Health &amp; E-commerce</span>
+          </div>
+          <span class="client-count">10 articles</span>
+        </div>
+        <div class="client-divider"></div>
+        <ul class="articles-list">
+          <li><span class="article-dot"></span><a href="https://cbdamericanshaman.com/cbd/gummies" target="_blank" rel="noopener noreferrer" class="article-link">CBD Gummies — Product Landing Page</a></li>
+          <li><span class="article-dot"></span><a href="https://cbdamericanshaman.com/7-oh-chewable-tablets-white-vein-advanced-alkaloids" target="_blank" rel="noopener noreferrer" class="article-link">7-OH Chewable Tablets — White Vein Advanced Alkaloids</a></li>
+          <li><span class="article-dot"></span><a href="https://cbdamericanshaman.com/buy/cbd-oil" target="_blank" rel="noopener noreferrer" class="article-link">Buy CBD Oil — Product Page</a></li>
+          <li><span class="article-dot"></span><a href="https://cbdamericanshaman.com/cbd/gummies-10mg" target="_blank" rel="noopener noreferrer" class="article-link">CBD Gummies 10mg — Product Landing Page</a></li>
+          <li><span class="article-dot"></span><a href="https://cbdamericanshaman.com/thca-flower/kush/super-glue" target="_blank" rel="noopener noreferrer" class="article-link">THCA Flower — Kush Super Glue</a></li>
+          <li><span class="article-dot"></span><a href="https://cbdamericanshaman.com/thca-flower/gelato/41" target="_blank" rel="noopener noreferrer" class="article-link">THCA Flower — Gelato 41</a></li>
+          <li><span class="article-dot"></span><a href="https://cbdamericanshaman.com/thca-flower/gelato/italian-ice" target="_blank" rel="noopener noreferrer" class="article-link">THCA Flower — Gelato Italian Ice</a></li>
+          <li><span class="article-dot"></span><a href="https://cbdamericanshaman.com/thca-flower/cookie/super-boof" target="_blank" rel="noopener noreferrer" class="article-link">THCA Flower — Cookie Super Boof</a></li>
+          <li><span class="article-dot"></span><a href="https://cbdamericanshaman.com/thca-flower/cookie/carbon-fiber-pre-roll" target="_blank" rel="noopener noreferrer" class="article-link">THCA Flower — Cookie Carbon Fiber Pre-Roll</a></li>
+          <li><span class="article-dot"></span><a href="https://cbdamericanshaman.com/thca-flower/runtz/canal-st-pre-roll" target="_blank" rel="noopener noreferrer" class="article-link">THCA Flower — Runtz Canal St Pre-Roll</a></li>
+        </ul>
+      </div>
+
+      <!-- Outdoor Warranty -->
+      <div class="client-block">
+        <div class="client-header">
+          <div class="client-header-left">
+            <h3 class="client-name">Outdoor Warranty</h3>
+            <span class="client-industry">RV &amp; Outdoor Lifestyle</span>
+          </div>
+          <span class="client-count">20 articles</span>
+        </div>
+        <div class="client-divider"></div>
+        <ul class="articles-list">
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/rv-roadside-assistance/" target="_blank" rel="noopener noreferrer" class="article-link">RV Roadside Assistance Guide</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/how-much-does-an-rv-weigh-why-does-it-matter/" target="_blank" rel="noopener noreferrer" class="article-link">How Much Does an RV Weigh &amp; Why Does It Matter?</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/5-steps-on-how-to-unclog-rv-toilet/" target="_blank" rel="noopener noreferrer" class="article-link">5 Steps on How to Unclog an RV Toilet</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/rv-water-heater-not-working-causes-and-fixes/" target="_blank" rel="noopener noreferrer" class="article-link">RV Water Heater Not Working — Causes and Fixes</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/rv-ownership-statistics-pros-and-cons-of-owning-an-rv/" target="_blank" rel="noopener noreferrer" class="article-link">RV Ownership Statistics — Pros and Cons</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/10-must-have-rv-upgrades-you-should-consider/" target="_blank" rel="noopener noreferrer" class="article-link">10 Must-Have RV Upgrades You Should Consider</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/standard-recreational-vehicle-certification-laws-and-regulations/" target="_blank" rel="noopener noreferrer" class="article-link">Standard RV Certification Laws and Regulations</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/camper-trailers-types-of-camping-trailers/" target="_blank" rel="noopener noreferrer" class="article-link">Camper Trailers — Types of Camping Trailers</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/rv-maintenance/" target="_blank" rel="noopener noreferrer" class="article-link">Complete RV Maintenance Guide</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/buyers-guide-on-how-to-buy-an-rv/" target="_blank" rel="noopener noreferrer" class="article-link">Buyer's Guide — How to Buy an RV</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/winterize-rv-how-to-winterize-a-camper/" target="_blank" rel="noopener noreferrer" class="article-link">How to Winterize an RV / Camper</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/best-rv-tires-best-tires-for-motorhomes-campers-and-trailers/" target="_blank" rel="noopener noreferrer" class="article-link">Best RV Tires for Motorhomes, Campers &amp; Trailers</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/why-is-living-in-an-rv-illegal/" target="_blank" rel="noopener noreferrer" class="article-link">Why Is Living in an RV Illegal?</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/how-to-sanitize-rv-fresh-water-tank/" target="_blank" rel="noopener noreferrer" class="article-link">How to Sanitize an RV Fresh Water Tank</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/how-much-to-rent-an-rv-for-a-week/" target="_blank" rel="noopener noreferrer" class="article-link">How Much Does It Cost to Rent an RV for a Week?</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/how-to-avoid-sales-tax-on-rv-purchase/" target="_blank" rel="noopener noreferrer" class="article-link">How to Avoid Sales Tax on an RV Purchase</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/how-to-get-internet-wifi-in-an-rv/" target="_blank" rel="noopener noreferrer" class="article-link">How to Get Internet &amp; WiFi in an RV</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/when-is-the-best-time-to-buy-an-rv/" target="_blank" rel="noopener noreferrer" class="article-link">When Is the Best Time to Buy an RV?</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/can-i-write-off-an-rv-as-a-business-expense/" target="_blank" rel="noopener noreferrer" class="article-link">Can I Write Off an RV as a Business Expense?</a></li>
+          <li><span class="article-dot"></span><a href="https://outdoorwarranty.com/rv-ac-not-turning-on-rv-ac-repair-and-troubleshooting/" target="_blank" rel="noopener noreferrer" class="article-link">RV AC Not Turning On — Repair &amp; Troubleshooting</a></li>
+        </ul>
+      </div>
+
+      <!-- Totebag Factory -->
+      <div class="client-block">
+        <div class="client-header">
+          <div class="client-header-left">
+            <h3 class="client-name">Totebag Factory</h3>
+            <span class="client-industry">E-commerce &amp; Retail</span>
+          </div>
+          <span class="client-count">6 pages</span>
+        </div>
+        <div class="client-divider"></div>
+        <ul class="articles-list">
+          <li><span class="article-dot"></span><a href="https://totebagfactory.com/collections/all-over-edge-to-edge-tote-bag-printing" target="_blank" rel="noopener noreferrer" class="article-link">All-Over Edge-to-Edge Tote Bag Printing</a></li>
+          <li><span class="article-dot"></span><a href="https://totebagfactory.com/collections/thanksgiving-bags" target="_blank" rel="noopener noreferrer" class="article-link">Thanksgiving Bags — Collection Page</a></li>
+          <li><span class="article-dot"></span><a href="https://totebagfactory.com/collections/initial-tote-bags-bulk" target="_blank" rel="noopener noreferrer" class="article-link">Initial Tote Bags Bulk — Collection Page</a></li>
+          <li><span class="article-dot"></span><a href="https://totebagfactory.com/collections/coloring-painting-tote-bags-kids" target="_blank" rel="noopener noreferrer" class="article-link">Coloring &amp; Painting Tote Bags for Kids</a></li>
+          <li><span class="article-dot"></span><a href="https://totebagfactory.com/collections/cheap-lunch-bags-small-6-pack" target="_blank" rel="noopener noreferrer" class="article-link">Cheap Lunch Bags Small (6-Pack)</a></li>
+          <li><span class="article-dot"></span><a href="https://totebagfactory.com/collections/cheap-lunch-bags-large-24-pack" target="_blank" rel="noopener noreferrer" class="article-link">Cheap Lunch Bags Large (24-Pack)</a></li>
+        </ul>
+      </div>
+
+      <!-- Fictionlit -->
+      <div class="client-block">
+        <div class="client-header">
+          <div class="client-header-left">
+            <h3 class="client-name">FictionLit</h3>
+            <span class="client-industry">Entertainment &amp; Fanfiction</span>
+          </div>
+          <span class="client-count">3 articles</span>
+        </div>
+        <div class="client-divider"></div>
+        <ul class="articles-list">
+          <li><span class="article-dot"></span><a href="https://fictionlit.com/star-wars-harry-potter-crossover-fanfiction/" target="_blank" rel="noopener noreferrer" class="article-link">Star Wars &amp; Harry Potter Crossover Fanfiction</a></li>
+          <li><span class="article-dot"></span><a href="https://fictionlit.com/steve-harrington-fanfiction/" target="_blank" rel="noopener noreferrer" class="article-link">Steve Harrington Fanfiction</a></li>
+          <li><span class="article-dot"></span><a href="https://fictionlit.com/nexo-knights-fanfiction/" target="_blank" rel="noopener noreferrer" class="article-link">Nexo Knights Fanfiction</a></li>
+        </ul>
+      </div>
+
+      <!-- Era Organics -->
+      <div class="client-block">
+        <div class="client-header">
+          <div class="client-header-left">
+            <h3 class="client-name">Era Organics</h3>
+            <span class="client-industry">Health &amp; Skincare</span>
+          </div>
+          <span class="client-count">15 articles</span>
+        </div>
+        <div class="client-divider"></div>
+        <ul class="articles-list">
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/hypochlorous-acid-for-psoriasis" target="_blank" rel="noopener noreferrer" class="article-link">Hypochlorous Acid for Psoriasis</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/hypochlorous-acid-for-eczema" target="_blank" rel="noopener noreferrer" class="article-link">Hypochlorous Acid for Eczema</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/hypochlorous-acid-for-acne" target="_blank" rel="noopener noreferrer" class="article-link">Hypochlorous Acid for Acne</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/hypochlorous-acid-with-tretinoin" target="_blank" rel="noopener noreferrer" class="article-link">Hypochlorous Acid with Tretinoin</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/hypochlorous-acid-for-rosacea" target="_blank" rel="noopener noreferrer" class="article-link">Hypochlorous Acid for Rosacea</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/skin-condition-stasis-dermatitis" target="_blank" rel="noopener noreferrer" class="article-link">Skin Condition — Stasis Dermatitis</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/skin-condition-seborrheic-dermatitis" target="_blank" rel="noopener noreferrer" class="article-link">Skin Condition — Seborrheic Dermatitis</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/skin-condition-nummular-eczema" target="_blank" rel="noopener noreferrer" class="article-link">Skin Condition — Nummular Eczema</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/skin-condition-neurodermatitis" target="_blank" rel="noopener noreferrer" class="article-link">Skin Condition — Neurodermatitis</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/skin-condition-contact-dermatitis" target="_blank" rel="noopener noreferrer" class="article-link">Skin Condition — Contact Dermatitis</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/skin-condition-atopic-dermatitis" target="_blank" rel="noopener noreferrer" class="article-link">Skin Condition — Atopic Dermatitis</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/skin-condition-phymatous-rosacea" target="_blank" rel="noopener noreferrer" class="article-link">Skin Condition — Phymatous Rosacea</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/skin-condition-papulopustular-rosacea" target="_blank" rel="noopener noreferrer" class="article-link">Skin Condition — Papulopustular Rosacea</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/skin-condition-ocular-rosacea" target="_blank" rel="noopener noreferrer" class="article-link">Skin Condition — Ocular Rosacea</a></li>
+          <li><span class="article-dot"></span><a href="https://www.eraorganics.com/blogs/beauty-guide/skin-condition-erythematotelangiectatic-rosacea" target="_blank" rel="noopener noreferrer" class="article-link">Skin Condition — Erythematotelangiectatic Rosacea</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── TECHNICAL WRITING ── -->
+  <section id="technical">
+    <div class="container">
+      <p class="section-label">Raw Documents</p>
+      <h2 class="section-title">Technical Writing Samples</h2>
+      <p class="section-subtitle">DMV processes, vehicle registration, plate lookups — available via Google Docs.</p>
+
+      <div class="docs-grid">
+        <a href="https://docs.google.com/document/d/1msu5JZ1Z93W1hs99wp_Z7uFnfn0S-WWrPKH6fjro0lg/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="doc-card">
+          <div class="doc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+            </svg>
+          </div>
+          <div class="doc-info">
+            <p class="doc-label">Technical Sample 01</p>
+            <p class="doc-sublabel">View on Google Docs ↗</p>
+          </div>
+        </a>
+        <a href="https://docs.google.com/document/d/1Oaob7Zz1tgShYXTIbKzS1iD4BJRUQyOE7r2Xae5r66M/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="doc-card">
+          <div class="doc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+            </svg>
+          </div>
+          <div class="doc-info">
+            <p class="doc-label">Technical Sample 02</p>
+            <p class="doc-sublabel">View on Google Docs ↗</p>
+          </div>
+        </a>
+        <a href="https://docs.google.com/document/d/15xzG_PwRm4r7MjnsAmT94MGadXGmE-J6f9exeXfc7Fk/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="doc-card">
+          <div class="doc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+            </svg>
+          </div>
+          <div class="doc-info">
+            <p class="doc-label">Technical Sample 03</p>
+            <p class="doc-sublabel">View on Google Docs ↗</p>
+          </div>
+        </a>
+        <a href="https://docs.google.com/document/d/1SlNHnS24LMZGBburvuYOWpBmp2ymqUtEevJfnVpdnXs/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="doc-card">
+          <div class="doc-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+            </svg>
+          </div>
+          <div class="doc-info">
+            <p class="doc-label">Technical Sample 04</p>
+            <p class="doc-sublabel">View on Google Docs ↗</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BAND ── -->
+  <section id="cta-band">
+    <div class="container">
+      <div class="cta-band-inner">
+        <p class="cta-band-label">Ready to Work Together?</p>
+        <h2 class="cta-band-title">Let's Build Content That Grows Your Business</h2>
+        <p class="cta-band-sub">Whether you need a single article, a full content strategy, or an ongoing writing partnership — I'm here to help your brand get found and get results.</p>
+        <div class="cta-band-actions">
+          <a href="mailto:sachileiparedes@gmail.com" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 7.5-9.75-7.5"/>
+            </svg>
+            Email Me Now
+          </a>
+          <a href="https://www.linkedin.com/in/sachilei" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Get in Touch</p>
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Open to freelance projects, long-term contracts, and full-time remote roles.</p>
+      <div class="contact-grid">
+        <a href="mailto:sachileiparedes@gmail.com" class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 7.5-9.75-7.5"/>
+            </svg>
+          </div>
+          <div class="contact-card-info">
+            <p class="contact-card-label">Email</p>
+            <p class="contact-card-value">sachileiparedes@gmail.com</p>
+          </div>
+        </a>
+        <a href="tel:+639760970734" class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z"/>
+            </svg>
+          </div>
+          <div class="contact-card-info">
+            <p class="contact-card-label">Phone</p>
+            <p class="contact-card-value">+63-976-0970-734</p>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/sachilei" target="_blank" rel="noopener noreferrer" class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </div>
+          <div class="contact-card-info">
+            <p class="contact-card-label">LinkedIn</p>
+            <p class="contact-card-value">linkedin.com/in/sachilei</p>
+          </div>
+        </a>
+        <div class="contact-card">
+          <div class="contact-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+            </svg>
+          </div>
+          <div class="contact-card-info">
+            <p class="contact-card-label">Location</p>
+            <p class="contact-card-value">Pasig City, Metro Manila, PH 1600</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <p class="footer-brand-name">Sachi Lei <span>Paredes</span></p>
+          <p class="footer-brand-desc">SEO Content Writer &amp; Content Strategist with 5 years of experience helping brands grow through strategic, search-optimized content.</p>
+          <a href="mailto:sachileiparedes@gmail.com" style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:0.8rem;color:#86efac;text-decoration:none;">sachileiparedes@gmail.com</a>
+        </div>
+        <div>
+          <p class="footer-col-title">Navigation</p>
+          <ul class="footer-nav-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#value">Services</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#technical">Technical Docs</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Contact</p>
+          <ul class="footer-contact-list">
+            <li>
+              <a href="mailto:sachileiparedes@gmail.com">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 7.5-9.75-7.5"/>
+                </svg>
+                sachileiparedes@gmail.com
+              </a>
+            </li>
+            <li>
+              <a href="tel:+639760970734">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z"/>
+                </svg>
+                +63-976-0970-734
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/sachilei" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+                linkedin.com/in/sachilei
+              </a>
+            </li>
+            <li>
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                </svg>
+                Pasig City, Metro Manila, PH
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2025 Sachi Lei Paredes. All rights reserved.</p>
+        <ul class="footer-bottom-links">
+          <li><a href="#hero">Back to Top ↑</a></li>
+          <li><a href="mailto:sachileiparedes@gmail.com">Hire Me</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
